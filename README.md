@@ -9,10 +9,9 @@ The models support the manuscript:
 ## Files
 
 | File | Description |
-
+|---|---|
 | `GLO_EF_temp3d11gradf_ADTOIAll_mask_Xnorm_epoch99.h5` | Trained model weights for 3D temperature reconstruction |
 | `GLO_EF_salt3d11gradf_ADTOIAll_mask_Xnorm_epoch99.h5` | Trained model weights for 3D salinity reconstruction |
-
 ## Related dataset
 
 The reconstructed temperature and salinity dataset is available on Zenodo:
