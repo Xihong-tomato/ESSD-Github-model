@@ -1,0 +1,43 @@
+# cfg_large_5f3D_training_params.yaml
+lr: 0.001
+device: cuda  # 或者根据实际情况填写具体的device
+n_layers: 1
+loss: MSE+CRPS
+config_file: experiments/cfg_middle_13f3D.yaml
+network_name: EF  # EF或TUNet
+saveStep: 10
+lrStep: 50
+batch_size: 5  # 请替换为实际的BATCH_SIZE值
+output_norm: false
+spec: false
+input_norm: true
+continue_training: true
+mask: true
+gradY: true
+gradZ: false
+decoZ: false
+vlist:
+  - time_sin
+  - time_cos
+  - lon
+  - lat
+  - oisst
+  - csss
+  - adt
+  - h
+  - u10
+  - v10
+  - wind_curl
+  - gradoi
+  - gradadt
+target: temp3d
+
+# params = {'lr': 1e-4, 'device': device,
+#           'n_layers': 1 , 'loss': 'L2', 'config_file':'cfgs/cfg_large_5f3D.yaml',
+#           'network_name': network_name, 'saveStep': 10,
+#           'lrStep': 50 , 'batch_size': BATCH_SIZE, 
+#           'output_norm': False, 'spec': False, 'input_norm':True,
+#           'continue_training': False, 'mask':True, 'gradY': False,
+#           'vlist': ['lon','lat','oisst','csss','adt'], #ssh -> adt
+#           'target': 'temp3d' #'temp'/'salt'/'ts'/'temp3d'/'salt3d'
+#           } 
